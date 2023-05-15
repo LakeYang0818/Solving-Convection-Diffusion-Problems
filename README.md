@@ -17,6 +17,8 @@ FDM is often suitable for problems with regular grid structures and simple geome
 
 ![FDM Central Scheme at N = 10 under different Peclet numbers](Desktop/Solving%20Convection-Diffusion%20Problem/Image%20Outputs/FDM%20Central%20Scheme_N%20=%2010%20under%20different%20Pe.png){width="375"}
 
+Image Outputs/2D Comparison of FDM with different schemes at Pe = 1.0.png
+
 ### 1.2 FDM with Artificial Difference Scheme
 
 ![FDM Artificial Scheme at N = 10 under different Peclet numbers](Desktop/Solving%20Convection-Diffusion%20Problem/Image%20Outputs/FDM%20Artificial%20Scheme_N%20=%2010%20under%20different%20Pe.png){width="375"}
@@ -27,7 +29,7 @@ FDM is often suitable for problems with regular grid structures and simple geome
 
 ### Comparison of FDM with different schemes
 
-![Different FDM Schemes under different Peclet numbers at N = 10](Image Outputs/Differnt%20FDM%20Schemes%20under%20different%20Pe%20at%20N%20=%2010.png){width="500"}
+![Different FDM Schemes under different Peclet numbers at N = 10](Desktop/Solving%20Convection-Diffusion%20Problem/Image%20Outputs/Differnt%20FDM%20Schemes%20under%20different%20Pe%20at%20N%20=%2010.png){width="500"}
 
 ## 2. FEM Finite Element Method
 
