@@ -3,27 +3,42 @@
 title: "Solving convection-diffusion problems"
 author: Yang, Jiayu ; Silvester, David.
 date: "2023-05-06"
-
-## Abstract
-
-The accurate and efficient numerical solution of convection-diffusion equations plays a pivotal role in various scientific and engineering applications. In this paper, we present a comprehensive study on the performance of three popular numerical methods: Finite Difference Method (FDM), Finite Element Method (FEM), and Finite Volume Method (FVM) - to solving the one-dimensional steady convection-diffusion problem.
+keywords: numerical solutions of PDEs, convection-diffusion problems, FDM, FEM, FVM, PINN
 
 ## Introduction
 
-The convection-diffusion problem arises in numerous physical phenomena, such as fluid flow with simultaneous diffusion of a chemical concentration or the transport of pollutants in the atmosphere. It involves the interaction between convection which represents the transport of quantities due to volume motion, and diffusion which denotes the spreading or dissipation of quantities due to concentration gradients.
+The project aims to find accurate and efficient numerical solutions to the one- and two-dimensional steady convection-diffusion equations.
+This code base supports all display images used in the project, except for the reference diagram.
+The methods we will use are respectively listed below.
 
-This combination often leads to challenging mathematical equations that are difficult to obtain analytical solutions, so we need numerical methods to solve them. The choice of an appropriate numerical method then becomes crucial to obtain reliable results that satisfy some basic properties. In this paper, we focus on five essential properties to evaluate the numerical methods:
+## 1. FDM Finite Difference Method
 
-1.  transportiveness
-2.  consistency
-3.  stability
-4.  convergence
-5.  conservativeness.
+FDM is often suitable for problems with regular grid structures and simple geometries, such as problems defined on rectangular or Cartesian grids. It is particularly effective for problems with smooth solutions and isotropic properties. FDM is relatively straightforward to implement and computationally efficient for structured grids. FDM is a good choice when accuracy requirements are moderate and the solution behavior is well-understood.
 
-To satisfy these five properties, we will adopt and evaluate three widely employed numerical methods: the finite Difference Method (FDM), the Finite Element Method (FEM), and the Finite Volume Method (FVM).
+### 1.1 FDM with Central Difference Scheme
 
-We will first start with the traditional version of each method. For FDM, we will implement the Central Difference Scheme a widely used method known for its simplicity and ease of implementation. For FEM, we will employ the Galerkin Approximation Scheme, which allows for flexible meshing and efficient handling of complex geometries. Finally, we will use FVM with Central Difference Scheme that provides a conservative formulation and compatibility with control volume discretization.
+### 1.2 FDM with Artificial Difference Scheme
 
-After evaluating five properties of these traditional schemes in solving one-dimensional steady convection-diffusion problems, we propose improvements for each method to overcome the limitations of the traditional schemes. For FDM, we introduce the Upwind Difference Scheme and the Artificial Difference Scheme; for FEM, we adopt the Petrov-Galerkin (SUPG) Approximation Scheme; and finally, for FVM, we explore the Upwind Difference Scheme and Hybrid Difference Scheme.
+### 1.3 FDM with Upwind Difference Scheme
 
-By evaluating the performance of these three methods and their associated schemes, we aim to provide comparisons of numerical methods for solving convection-diffusion problems, helping to select the appropriate numerical method when solving problems under different physical situations.
+## 2. FEM Finite Element Method
+
+FEM is well-suited for problems with complex geometries, irregular domains, and problems that involve heterogeneous or anisotropic materials. It offers flexibility in handling arbitrary geometries by using unstruc- tured or adaptive meshes. FEM is particularly effective for problems with localized phenomena, such as stress concentrations or boundary layers. It provides accurate solutions and allows for the inclusion of various boundary conditions and material properties. FEM is widely used in structural mechanics, heat transfer, and fluid dynamics.
+
+### 2.1 FEM with Galerkin Approximation Scheme
+
+### 2.2 FEM with Petrov-Galerkin Approximation Scheme
+
+
+## 3. FVM Finite Volume Method
+
+FVM is often chosen for problems with conservation laws, such as fluid flow, heat transfer, or mass transport problems. It is suitable for problems involving control volumes or cells, where the solution is discretized at the center of each cell. FVM naturally ensures the conservation of quantities across the cell interfaces and is robust for capturing shocks, discontinuities, or strong gradients. FVM is commonly used in computational fluid dynamics (CFD) and has applications in various engineering disciplines. It is particularly suitable for problems with complex flow behaviors, such as turbulent flows or multiphase flows.
+
+### 3.1 FVM with Central Difference Scheme
+
+### 3.2 FVM with Upwind Difference Scheme
+
+### 3.3 FVM with Hybrid Difference Scheme
+
+
+It’s important to note that the choice between FDM, FEM, and FVM is not always mutually exclusive, and there can be overlaps depending on the specific problem and the available computational resources. Researchers often select the method that best matches the problem requirements in terms of accuracy, efficiency, and the ability to handle the desired geometries and physics.
