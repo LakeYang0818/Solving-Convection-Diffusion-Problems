@@ -27,7 +27,7 @@ FDM is often suitable for problems with regular grid structures and simple geome
 
 ### Comparison of FDM with different schemes
 
-![Different FDM Schemes under different Peclet numbers at N = 10](Desktop/Solving%20Convection-Diffusion%20Problem/Image%20Outputs/Differnt%20FDM%20Schemes%20under%20different%20Pe%20at%20N%20=%2010.png){width="500"}
+![Different FDM Schemes under different Peclet numbers at N = 10](Image Outputs/Differnt%20FDM%20Schemes%20under%20different%20Pe%20at%20N%20=%2010.png){width="500"}
 
 ## 2. FEM Finite Element Method
 
